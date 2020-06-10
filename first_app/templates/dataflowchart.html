@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+          body {
+            font-family: 'Roboto';
+            color: #333;
+            background-color: #F9F7EB;
+          }
+
+          #title {
+            font-family: 'Merriweather';
+            text-align: center;
+            padding: 30px;
+            font-size: 28px;
+            letter-spacing: -0.01em;
+            color: #333;
+          }
+          #legend {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 10px 10px;
+            font-size: 12px;
+          }
+          #legend .item {
+            line-height: 12px;
+            padding: 0 10px 0 4px;
+          }
+          #legend .item.male {
+            border-left: 12px solid #19A0AA;
+          }
+          #legend .item.female {
+            border-left: 12px solid #F15F36;
+          }
+          #chart-wrapper {
+            height: 1000px;
+          }
+          #footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10px;
+            color: #aaa;
+            font-size: 12px;
+          }
+          #footer a {
+            color: #aaa;
+          }
+          .chart{
+            width: 50%;
+            height: 25%;
+          }   
+        
+        </style>
+    </head>
+    <body>
+      {% extends "visualization.html" %}
+
+        {% block code_block %}
+          <center>
+            {% load static %}
+            <div class="graphs">
+            <div class="chart">
+              <img src="{% static 'Processing chart.png' %}">
+            </div>
+          </div>
+          </center>
+        {% endblock %}
+    </body>
+   
+</html>
+
+
+

@@ -1,0 +1,22 @@
+{% extends "prediction.html" %}
+
+    {% block code_block %}
+        <center>
+            <div class="input-group mb-3">
+                <div class="transbox">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Yearly Crime prediction
+                        </div>
+                        <!-- and mnth > mnth -->
+                        {% if yr > year  %} 
+                           <h2>Crime in {{year}} recorded were {{data}}</h2>
+                        {% else %}
+                            <h2>Crime in Year {{year}} can be {{data}}</h2>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </center>
+    
+    {% endblock %}

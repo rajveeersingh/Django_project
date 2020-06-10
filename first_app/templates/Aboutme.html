@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #0099cc 16%, #99ffcc 75%);
+  background-repeat: no-repeat;
+}
+.top-right img{
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    /* padding-right: 92%; */
+  }
+  
+ .top-right {
+    position: absolute;
+    padding-top: 50px;
+    right: 96%;
+  }
+.icon-bar {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .icon-bar i {
+  font-family: "FontAwesome" !important;
+  }
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+.card img{
+    border-radius: 60%;
+}
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  
+  text-align: center;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  position: relative;  
+  color: #c7cbd6;
+}
+.about-section h3{
+    text-align: right;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+  .icon-bar {
+  position: relative;
+  top: 120px;
+  width: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
+  .top-right img{
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    /* padding-right: 92%; */
+  }
+ .top-right {
+    position: absolute;
+    padding-top: 10px;
+    right: 98%;
+  }
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+    <div class="icon-bar">
+        <a href="/" class="top-right">
+            <i>
+              <img src="{% static 'home.png' %}">
+            </i>
+        </a> </div>
+  
+  <h2 ><p><em><q>I am never afraid of problems.
+      Because they help me to enhance my skills and personality.</q>  <h3>--Rajveer Singh Sisodiya</h3></em></p></h2>
+  
+</div>
+
+<h2 style="text-align:center">About Me</h2>
+<div class="row">
+  <div class="column"> 
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'Aboutme.jpg' %}" alt="Mike" style="width:100%; height: 50%;" >
+      <div class="container">
+        <h2>Rajveer Singh Sisodiya</h2>
+        <p class="title">Project Head & Designer </p>
+        <p>I am very fond of learning new technologies. I have done my PG-Diploma in Machine Learning and Bigdata from CDAC Pune. I have also built my personal quadruped robot and B.E. final project "Satellite Shunya" based on the Arduino microcontroller. And rest is about this project. As crime is a very difficult task to control so I have designed this project which is predicting the future value of crime and analyzing crime of the Chicago city which can help the police and local people of the city. we are capable of warning people from the highest crime area and increasing police patrols.</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+  </div>
+</div>
+
+</body>
+</html>

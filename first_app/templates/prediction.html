@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    {% load static %} <head>
+        <title>Prediction</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/prediction.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/visualization.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="icon" href="{% static 'logo.png' %}">
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background-color: #f5e9cb;
+                background-size: 100% 100%;
+                position: relative;
+                background-repeat: no-repeat;
+                image-orientation: "width:50px";
+            }
+            /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 10px;
+  }
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+            div.transbox {
+                width: auto;
+                margin: 30px;
+                background-color: #ffffff;
+                border: 0.5px solid black;
+                opacity: 0.5;
+                filter: alpha(opacity=60); /* For IE8 and earlier */
+                border: 1.5px solid orangered;
+                outline-style: solid;
+                outline-color: invert;
+            }
+            div.transbox h2 {
+                margin: 5%;
+                font-weight: bold;
+                color: #000000;
+            }
+        </style>
+    </head>
+    <body style="background-image: url('{% static 'pred.jpeg' %}')";>
+        <div class= "header">
+            <center>
+                <img src="{% static 'pridictive.jpg' %}">
+            </center>
+            <div class="top-right">
+                <a href="/">
+                    <img src="{% static 'home.png' %}">
+                </a>
+            </div>
+               <!-- <div class="Welcome_text">Analysis</div> -->
+        </div>   
+        <center>
+            <br><br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <div style="text-align:center">
+                        <h2>Year wise prediction</h2>    
+                    </div>
+                    <form action="/Prediction" method="POST">
+                        {% csrf_token %}
+                        <div class="input-group mb-3">
+                            <input name = 'value'  class="form-control" placeholder="Enter Year"   required><br><br>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit">Enter</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="column">
+                    <div style="text-align:center">
+                        <h2>Select parameter to predict crime</h2>    
+                    </div>
+                    <form action="/Graph" method="POST">{% csrf_token %}
+                        
+                        <select class="btn btn-outline-secondary btn-sm" name = "graph" >
+                                <option value="" disabled selected>Choose Graphs</option>
+                                <option value="0">Pie Chart</option>
+                                <option value="1">Bar Graph</option>
+                                <option value="2">Word Cloud</option>
+                                <option value="3">Count plot</option>
+                                <option value="4">Line chart</option>
+                                <input type="submit" class="btn btn-outline-dark btn-sm" >
+                        </select>
+                    </form> 
+                </div>
+            </div>
+        </div>
+        </center>
+        <br><br><br>   
+        {% block code_block %}
+          
+            {% endblock %}
+            <br><br><br><br><br> 
+            <br><br><br><br><br>
+    </body>
+
+
+</html>

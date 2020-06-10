@@ -1,0 +1,104 @@
+<!Doctype html>
+{% load static %}
+<html>
+    <head> 
+        <title>Visualization</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/visualization.css' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="icon" href="{% static 'logo.png' %}">
+        <style>
+            .graphs{
+                width :90%;
+                height: 50%;
+            }
+            body{
+                image-orientation: "width:50px" "height:100%";
+            }
+            .row input{
+                color: black;
+            }
+            .graphs h1{
+                outline-style: solid;
+                outline-color: black;
+                border: 2px solid rgb(211, 92, 92);
+                opacity: 0.6;
+                width: 30%;
+                font-size: 180%;
+            }
+            #image{
+                width: 80%;
+            }
+            .navbar {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 0;
+                font-size: 12px;
+                letter-spacing: 5px;
+            }
+            .navbar-nav  li a:hover {
+                color: #1abc9c !important;
+            }
+        </style>
+    </head>
+
+    
+    <body >
+        <div class= "header">
+            <center>
+                <img src="{% static 'header2.jpg' %}">
+            </center>
+            <div class="top-right">
+                <a href="/">
+                    <img src="{% static 'home.png' %}">
+                </a> 
+            </div>
+        </div>
+        
+        <center>
+            <div class="row" >
+            
+                <div class="col-sm-4" >
+                    <form action="/Graph" method="GET,POST">
+                        <input type="submit" class="btn btn-outline-dark btn-sm" value="Graphs" >
+                    </form> 
+                </div>
+           	    <br><br>
+                <div class="col-sm-4">
+                    <!-- <form action="/Animated_Graph" method="GET"> -->
+                        <a class="about" href="/Animated_Graph">
+                        <input type="submit" class="btn btn-outline-dark btn-sm" value="Animated graph" >
+                    <!-- </form> --></a>
+                </div>
+                <br><br>
+                <div class="col-sm-4">
+                    <form action="/Live_Chart" method="GET">
+                    <!-- <a href="/Live Chart"> -->
+                        <input type="submit" class="btn btn-outline-dark btn-sm" value="Data Flow Chart" >
+                    <!-- </a> -->
+                    </form>
+                </div>
+            </div>
+        </center>
+        <center> 
+        
+               
+            {% block code_block %}
+                {% endblock %}
+            
+        </center>
+        
+        
+   
+      
+
+    </body>    
+
+</html>
+    

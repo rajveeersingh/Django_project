@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #0099cc 16%, #99ffcc 75%);
+    background-repeat: no-repeat;
+  }
+  /* .top-right {
+    position: absolute;
+    top: 180px;
+    right: 92%;
+  } */
+  .top-right img{
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    /* padding-right: 92%; */
+  }
+  * {
+    box-sizing: border-box;
+    width: auto;
+  }
+  .column img{
+      border-radius: 80%;
+      width: 70%;
+      margin-top: 50%;
+      margin-left: 15%;
+  }
+
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;  
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 10px;
+  }
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .icon-bar {
+    position: fixed;
+    top: 50%;
+    width: auto;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .icon-bar i {
+  font-family: "FontAwesome" !important;
+  }
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  .facebook {
+    background: #3B5998;
+    color: white; 
+  }
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .instagram {
+    background: #d46313;
+    color: white;
+  }
+  .phone{
+    background: #a8e02f;
+    color: black;
+  }
+  .email{
+    background: brown;
+    color: white;  
+  }
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  .icon-bar {
+  position: relative;
+  top: 180px;
+  width: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  .column img{
+    border-radius: 80%;
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  .instagram {
+    background: #d46313;
+    color: white;
+  }
+  .phone{
+    background: #a8e02f;
+    color: black
+  }
+}
+  </style>
+</head>
+<body>
+  
+        <div class="icon-bar">
+                <a href="/" class="top-right">
+                    <i>
+                      <img src="{% static 'home.png'%}">
+                    </i>
+                </a> 
+           
+                <a href="https://www.facebook.com/rajveer.rajput.1654" title="Rajveer's profile" class="facebook"><i class="fa fa-facebook"></i></a> 
+                <!-- <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>  -->
+                <!-- <a class="twitter-follow-button" href="https://twitter.com/TwitterDev"data-size="large"><i class="fa fa-twitter"></i></a> -->
+                <a href="https://twitter.com/sisodiya5561326?ref_src=twsrc%5Etfw" class="twitter" title="Follow @sisodiya5561326">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/bhanwar-rajveer-singh-sisodiya-801880165" class="linkedin" title="Join Me @sisodiya_bh_rajveer"><i class="fa fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/sisodiya_bh_rajveer/" class="instagram" title="Follow @sisodiya_bh_rajveer"><i class="fa fa-instagram"></i></a> 
+                <a href="tel:+919753242312" class="phone" title="Contact Me at +919753242312"><i class="fa fa-phone" style="font-size:24px"></i></a>
+                <a href="mailto:usdokomo.10@gmail.com" class="email" title='Mail Me on usdokomo.10@gmail.com' ><i class="fa fa-at" style="font-size:24px;"></i></a>
+              </div>
+
+<div class="container">
+  <div class="row">
+      <div class="column" >
+                <!-- <img src="/home/superadmin/DBDA/project/My_Project/static/contact.png" > -->
+                <img src="{%static 'contact.png' %}">         
+      </div>
+      <div class="column">
+            <div style="text-align:center">
+                  <h2>Fill Information</h2>
+                  <h3> & </h3>
+                  <p>Suggestion or feedback, if any ?</p>
+            </div>
+            <div class="form-group"> 
+              {% if messages %}
+                <ul class = "messages">
+                  {% for message in messages %}
+                    <li>
+                      <div class="alert alert-success">{{message}}</div>
+                    </li>
+                  {% endfor %}
+      
+                </ul>
+              {% endif %}
+            </div>
+            <form action="/Cont" method="POST">
+              {% csrf_token %}
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.."required>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.."required>
+            <label for="country">Country</label>
+            <input type="text" id="lname" name="nation" placeholder="Your Country.."required>
+            <label for="state">State</label>
+            <input type="text" id="lname" name="state" placeholder="Your state.."required>
+            <label for="email">Email</label>
+            <input type="email" id="lname" name="email" placeholder="Your Email.." required>
+            <!-- <br><label for="subject">Subject</label> -->
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:80px" maxlength="200" required></textarea>
+            <input type="submit" value="Submit">
+            </form>
+            
+      </div>
+      
+  </div>
+  
+</div>
+
+</body>
+</html>
+
+
+
+
+

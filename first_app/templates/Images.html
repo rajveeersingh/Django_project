@@ -1,0 +1,24 @@
+{% extends "Graph.html" %}
+    {% block code_block %}
+    <center>
+        {% load static %}
+        <form action="/Graph" method="POST">{% csrf_token %}
+            <select class="btn btn-outline-secondary btn-sm" name = "graph" searchable="Search here..">
+                <option value="" disabled selected>Choose Graphs</option>
+                <option value="1">Pie Chart</option>
+                <option value="2">Bar Graph</option>
+                <option value="3">Word Cloud</option>
+                <option value="4">Count plot</option>
+                <option value="5">Line chart</option>
+                <input type="submit" class="btn btn-outline-dark btn-sm" onclick="refreshImage()" >
+            </select>
+        </form>     
+    </center>
+    <br><br>        
+    <div class="col-sm-4"></div>
+       <div class="graphs">
+            <h1>Graphs</h1>
+            <img id ='image'src="{% static 'arr.png' %}"><br>
+            
+        </div>
+    {% endblock %}
